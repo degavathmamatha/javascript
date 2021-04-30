@@ -1,0 +1,14 @@
+def sum(a,b,c):
+    i=-1
+    sum=0
+    avg=0
+    while i<a:
+      sum=-a-b-c
+      avg=sum/3
+      i=i-1
+      print(sum)
+      print(avg)
+a=int(input("en"))
+b=int(input("en"))
+c=int(input("en"))
+sum(a,b,c)

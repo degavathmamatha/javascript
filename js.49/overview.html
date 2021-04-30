@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filtered{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form class="s1">
+        <input type="text" name="search">
+    </form>
+    <ul class="t1">
+        <li>
+            <span>LIST1</span>
+
+        </li>
+        <li>
+            <span>LIST2</span>
+        </li>
+        <li>
+            <span>LIST3</span>
+        </li>
+
+    </ul>
+    <script>
+        var f2=document.querySelector('.s1');
+        var l1=document.querySelector('t1');
+        var b1=function(m){
+           // console.log(Array.from(l1.children));
+           Array.from(l1.children).filter(function(u){
+               return (!u.textContent.includes(m));
+           })
+           .forEach(function(c){
+               //console.log(c);
+            c.classList.add('filtered');
+           })
+
+
+
+           Array.from(l1.children).filter(function(u){
+               return (u.textContent.includes(m));
+           })
+           .forEach(function(c){
+               //console.log(c);
+            c.classList.remove('filtered');
+           })
+         }
+        f2.addEventListener('keyup',function(e){
+    var k1=f2.search.value;
+    b1(k1);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+f=open("f1.txt","a")
+f.write("\niam thinking may last week i want to do job")
+f.close()
+f=open("f1.txt","r")
+print(f.read())

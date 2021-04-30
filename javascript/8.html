@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+    <ul class="list-group todos m-5">
+        <li class="list-group-item d-flex justify-content-between">
+            <span>A1</span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+            <span>A2</span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+            <span>A3</span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </li>
+      
+      </ul>
+      <form class="t1 m-5 ">
+          <input class="form-control text-center" type="text" name="a1" placeholder="Adding an item">
+      </form>
+    </div>
+<script>
+    var h1=document.querySelector('.t1');//form
+    var list=document.querySelector('.todos');//ul element
+    var icons=document.querySelector('.fa-trash');//icon element
+    var j1=function(s1){
+        // console.log(s1);
+        const h4=`
+        <li class="list-group-item d-flex justify-content-between">
+            <span>${s1}</span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </li>`;
+list.innerHTML+=h4;
+    }
+    
+
+    h1.addEventListener('submit',function(e){
+        e.preventDefault();
+      var y1=(h1.a1.value.trim());
+        h1.reset();
+        j1(y1);
+    })
+list.addEventListener('click',function(e){
+    if(e.target.classList.contains('fa-trash')){
+        console.log(e.target.parentElement.remove());
+    }
+})
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

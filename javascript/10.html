@@ -1,0 +1,78 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      
+    
+      
+        .n{
+          
+                position:absolute;
+                left:8px;
+                top:200px;
+           border:1px solid ;
+           height:30px;
+        }
+        input{
+            width:192px;
+            border-radius:5px;
+        outline:none;
+        border-color:none;
+        /* box-shadow: 8px yellow; */
+        }
+
+    </style>
+</head>
+<body>
+  
+    <div class="n3" style="background-color: #eee;margin-top:10px;padding:0px;">
+        <h4 style="background-color:gray">Basic Info</h4>
+        <div>
+    <input type="text" name="" id="">
+</div>
+<div>
+    <select name="" id="" style="width:200px">
+        <option value="">A1</option>
+        <option value="">A2</option>
+        <option value="">A3</option>
+    </select>
+</div>
+<div>
+    <input type="password" name="" id="">
+</div>
+    <label for="">ABC</label>
+    <input type="file" name="" id="" value="Browse">
+    <fieldset style="width:400px">
+        <legend>Education Status</legend>
+        <div>
+        <input type="radio" name="" id="">
+        <label for="">A1</label>
+    </div>
+    <div>
+        <input type="radio" name="" id="">
+        <label for="">A2</label>
+    </div>
+        <input type="radio" name="" id="">
+        <label for="">A3</label>
+
+    </fieldset>
+    <!-- <input type="text" name="" id=""> -->
+    <input class="n" type="file" style="display:none">
+<button onclick="document.querySelector('.n').click()">Browse files</button>
+<input type="text" name="" id="" placeholder="No file choosen">
+    <!-- <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('getFile').click()">Your text here</button> -->
+
+
+<input type='file' id="getFile" style="display:none"> 
+</div>
+</body>
+<script>
+    var b1=document.querySelector('.n');
+    b1.innerHTML+="Browse file";
+</script>
+</html>

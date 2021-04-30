@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="todos">
+        <li>A1</li>
+        <li>A2</li>
+        <li>A3</li>
+        </ul>
+        <form class="adding">
+            <input type="text" name="a1">
+            </form>
+            <script>
+                var list=document.querySelector('.todos');
+                var f1=document.querySelector('adding');
+                f1.addEventListener('submit',function(e){
+                    e.preventDefault();
+                    console.log(f1.a1.value);
+                    f1.reset();
+                })
+            </script>
+</body>
+</html>
